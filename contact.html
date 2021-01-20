@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <meta charset="UTF-8">
+   <link rel="stylesheet" href="./css/normalize.css">
+   <link rel="stylesheet" href="./css/style.css">
+   <link rel="stylesheet" href="./css/contact.css">
+   <link rel="stylesheet" href="./css/jquery.rippleria.css">
+
+    <title>株式会社Oomiya</title>
+  </head>
+  <body>
+    <div class="container">
+    <header class="header clearfix">
+    <a href="index.html" ><img src="./images/logo.png" class="logo_image"></a>
+    <nav>
+      <ul class="top_menu clearfix">
+        <li><a href="index.html">ホーム</a></li>
+        <li><a href="#">事業内容</a></li>
+        <li><a href="#">会社概要</a></li>
+        <li><a href="#">お問い合わせ</a></li>
+      </ul>
+    </nav>
+    </header>
+    <div class="block tac">
+  	    <a style="display: inline-block;" id="rippleria" href="#">
+  	        <img src="./images/kotei_top_38.png"class="image_area">
+  	    </a>
+  	</div>
+
+
+    <div class="wrapper clearfix">
+
+     <aside class="side_menu">
+       <nav>
+         <ul>
+          <li><a href="business.html">事業内容</a></li>
+          <li><a href="company.html">会社概要</a></li>
+          <li class="point"><a href="contact.html">お問い合わせ</a></li>
+        </ul>
+      </nav>
+      <p class="banner">
+        <a href="#">
+          <img src="./images/img_index_01.png">
+        </a>
+      </p>
+    </aside>
+    <article class="content">
+    　  <form action="">
+      　　<table class ="contact">
+      　　 <tr>
+      　　  <th>お名前</th>
+      　　  <td> <input type="text"></td>
+      　　 </tr>
+      　　 <tr>
+      　　  <th>メールアドレス</th>
+      　　  <td><input type="text"></td>
+      　　 </tr>
+      　　 <tr>
+      　　  <th>性別</th>
+           <td>男<input type="checkbox"> 女<input type="checkbox"></td>
+          </tr>
+          <tr>
+           <th>お問い合わせ内容</th>
+           <td> <input type="text"class="hogehoge"></td>
+          </tr>
+         </table>
+         <input type="submit" value="送信"class="send">
+       </form>
+    </article>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
+    </script>
+    <script src="./js/jquery.rippleria.min.js"></script>
+
+    <script>
+    $('#rippleria').rippleria({
+          duration: 750,
+          easing: 'ease-in'
+      });
+
+      $('#rippleria').click(function(e) {
+          e.preventDefault();
+
+          var randInt = function (min, max) {
+          var rand = min + Math.random() * (max - min)
+          rand = Math.round(rand);
+          return rand;
+      };
+
+      $(this).rippleria('changeColor',
+              'rgba('+randInt(0,200)+','+randInt(0,200)+','+randInt(0,200)+',0.'+randInt(3,5));
+      });
+  </script>
+
+    </div>
+    <footer class="footer">
+      <p>Copyright © 2018 DIVE INC All RIGHTS RESERVED.</p>
+    </footer>
+   </div>
+  </body>
+</html>
